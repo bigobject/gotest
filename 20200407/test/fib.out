@@ -1,0 +1,6 @@
+mode: count
+test/test/alg/sub/sub.go:10.36,12.2 1 2
+test/test/alg/sub/sub.go:14.42,16.2 1 0
+test/test/alg/multi/multi.go:3.30,5.2 1 1
+test/test/alg/add/add.go:3.28,5.2 1 1
+test/test/alg/add/add.go:7.34,9.2 1 1
