@@ -1,0 +1,52 @@
+positions: instr line
+events: cpu(ms)
+
+ob=(1) main
+fl=(1) /data1/changchun/gocode/src/test/main.go
+fn=(1) main.main.func1
+0x4b1687 29 1130
++10 29 970
++10 29 950
+-16 30 850
++3 29 810
+
+ob=(1)
+fl=(2) /data1/changchun/goinstall/go/src/sync/pool.go
+fn=(2) sync.(*Pool).Get
+-310804 130 10
+
+ob=(1)
+fl=(3) /data1/changchun/goinstall/go/src/fmt/print.go
+fn=(3) fmt.newPrinter
++176278 133 0
+cfl=(2)
+cfn=(2)
+calls=0 * 130
+* * 10
+
+ob=(1)
+fl=(3)
+fn=(4) fmt.Sprintln
++2661 270 0
+cfl=(3)
+cfn=(3)
+calls=0 * 133
+* * 10
+
+ob=(1)
+fl=(4) /data1/changchun/goinstall/go/src/log/log.go
+fn=(5) log.Println
++38457 301 0
+cfl=(3)
+cfn=(4)
+calls=0 * 270
+* * 10
+
+ob=(1)
+fl=(1)
+fn=(1)
++93535 32 0
+cfl=(4)
+cfn=(5)
+calls=0 * 301
+* * 10

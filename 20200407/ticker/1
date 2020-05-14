@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
+func main() {
+	done := sync.WaitGroup{}
+
+	for i:=0;i<300;i++ {
+		done.Add(1)
+		go worcker(i, &done)
+	}
+	done.Wait()
+}
+
+func worcker(i int, done *sync.WaitGroup) {
+	defer done.Done()
+
+	ticker := time.NewTicker(20 * time.Millisecond)
+	count := 1
+	for {
+		select {
+		case t := <-ticker.C:
+			fmt.Println("Tick ", i, " at", t.)
+			count++
+			if count > 1000 {
+				ticker.Stop()
+				return
+			}
+		}
+	}
+}
