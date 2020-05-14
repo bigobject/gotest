@@ -1,0 +1,7 @@
+total 16
+-rw-r--r-- 1 changchun dev  312 May  9 15:14 1.wav
+-rw-r--r-- 1 changchun dev    0 May  9 15:14 2.wav
+-rw-r--r-- 1 changchun dev    0 May  9 14:50 3.wav
+drwxr-xr-x 2 changchun dev 4096 May  9 15:13 dir1
+drwxr-xr-x 2 changchun dev 4096 May  9 15:13 dir2
+drwxr-xr-x 2 changchun dev 4096 May  9 15:14 dir3

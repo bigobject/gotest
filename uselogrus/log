@@ -1,0 +1,3 @@
+{"animal":"walrus","level":"info","msg":"A walrus appears","time":"2020-04-07T14:24:27+08:00"}
+{"level":"debug","msg":"Useful debugging information.","time":"2020-04-07T14:30:53+08:00"}
+{"animal":"walrus","level":"info","msg":"A walrus appears","time":"2020-04-07T14:30:53+08:00"}

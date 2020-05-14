@@ -1,0 +1,46 @@
+package main
+
+import (
+	"fmt"
+	"time"
+	"sync"
+)
+
+func main() {
+
+	input := make(chan int, 3)
+
+    var wg sync.WaitGroup
+    wg.Add(1)
+
+	go func() {
+        fmt.Println("begin")
+        defer wg.Done()
+
+		timeouted := false
+		stopinput := false
+		timeout := time.After(time.Millisecond * 1000)
+		for {
+			select {
+			case _, ok := <-input:
+				if !ok {
+					stopinput = true
+					fmt.Printf("stopinput")
+					break
+				}
+
+			case <-timeout:
+				timeouted = true
+				fmt.Printf("timeout")
+				break
+			}
+			if timeouted && stopinput {
+				break
+			}
+		}
+        
+        fmt.Println("end")
+	}()
+    wg.Wait()
+
+}
